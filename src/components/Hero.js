@@ -1,4 +1,6 @@
 import React from 'react';
+import TodoForm from './TodoForm';
+import TodoList from './TodoList';
 
 const Hero = ({ handleLogout }) => {
     
@@ -6,8 +8,13 @@ const Hero = ({ handleLogout }) => {
         <section className="hero">
             <nav>
             <h2>Welcome</h2>
-            <button onClick={handleLogout}>Logout</button>
+            <button className='logout' onClick={handleLogout}>Logout</button>
+            
             </nav>
+            <div className='todo-app'>
+                <TodoList />
+            </div>
+            
         </section>
     );
 };
